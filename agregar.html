@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <span class="orn" aria-hidden="true">✦ ✦ ✦</span>
+        <h1 id="titulo">Registro de Producto</h1>
+        
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="agregar.html">Agregar Producto</a>
+    </nav>
+    <main>
+        <form id="form" novalidate>
+            <label for="nombre">Nombre del producto</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Ingrese nombre" maxlength="60" autocomplete="off">
+            <div class="err" id="e-nombre"></div>
+
+            <label for="categoria">Categoría</label>
+            <input id="categoria" name="categoria" type="text" placeholder="Ingrese categoría" maxlength="40" autocomplete="off">
+            <div class="err" id="e-categoria"></div>
+
+            <label for="descripcion">Descripción <small>(opcional)</small></label>
+            <textarea id="descripcion" name="descripcion" rows="4" maxlength="220"></textarea>
+            <div class="hint" id="hint"></div>
+            <div class="err" id="e-descripcion"></div>
+
+            <label for="cantidad">Cantidad</label>
+            <input id="cantidad" name="cantidad" type="number" min="0" step="1" placeholder="0">
+            <div class="err" id="e-cantidad"></div>
+
+            <div class="actions">
+                <button class="btn" id="save" type="submit">Guardar Producto</button>
+                <a class="btn ghost" href="productos.html">Cancelar</a>
+            </div>
+        </form>
+    </main>
+    <footer>Sistema de Inventario · Temporada navideña 2026</footer>
+    <script src="app.js"></script>
+</body>
+</html>

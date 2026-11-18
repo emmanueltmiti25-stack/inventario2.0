@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <span class="orn" aria-hidden="true">✦ ✦ ✦</span>
+        <h1 id="titulo">Inventario de Productos</h1>
+        
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="agregar.html">Agregar Producto</a>
+    </nav>
+    <main>
+        <div class="toolbar">
+            <input id="q" type="search" placeholder="Buscar por nombre o categoría" aria-label="Buscar productos">
+            <span class="count" id="count"></span>
+            <a class="btn" href="agregar.html">+ Nuevo producto</a>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th class="num">ID</th><th>Producto</th><th>Categoría</th><th class="num">Existencia</th><th>Acciones</th></tr></thead>
+                <tbody id="tbody"></tbody>
+            </table>
+            <p class="empty" id="empty" hidden></p>
+        </div>
+        <dialog id="dlg">
+            <h3>Eliminar producto</h3>
+            <p>¿Seguro que deseas eliminar “<span id="dlgName"></span>”? Esta acción no se puede deshacer.</p>
+            <div class="actions"><button class="btn danger" id="confirm" type="button">Eliminar</button><button class="btn ghost" id="cancel" type="button">Cancelar</button></div>
+        </dialog>
+    </main>
+    <footer>Sistema de Inventario · Temporada navideña 2026</footer>
+    <script src="app.js"></script>
+</body>
+</html>
